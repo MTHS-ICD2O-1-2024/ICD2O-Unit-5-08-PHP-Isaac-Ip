@@ -29,29 +29,26 @@
       <div class="right-image">
         <img src="./images/division.png" alt="Division Table" width="250" />
       </div>
-      <br />
-      <div class="page-content">Please enter values below :
-      </div>
       <div class="page-content-php">
-        <form action="answer.php" method="GET">
-          <br />
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="value-1" name="value-1">
-            <label class="mdl-textfield__label" for="value-1">Value 1</label>
-          </div>
-          <br />
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="value-2" name="value-2">
-            <label class="mdl-textfield__label" for="value-2">Value 2</label>
-          </div>
-          <br />
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            type="submit">
-            Calculate
-          </button>
-        </form>
-      </div>
-    </main>
+        <div id="submit">
+    <?php
+    $dividend = $_GET["value-1"];
+    $divisor = $GET["value-2"];
+
+    $remainder = $dividend;
+    $quotient = 0;
+
+    // process
+    if ($dividend > 0 && $divisor > 0) {
+      while ($remainder >= $divisor) {
+        $remainder -= $divisor;
+        $quotient++;
+      }
+    }
+
+    // output
+    echo "Quotient: $quotient, Remainder: $remainder";
+    ?>
   </div>
 </body>
 
