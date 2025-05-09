@@ -33,7 +33,7 @@
         <div id="submit">
     <?php
     $dividend = $_GET["value-1"];
-    $divisor = $GET["value-2"];
+    $divisor = $_GET["value-2"];
 
     $remainder = $dividend;
     $quotient = 0;
